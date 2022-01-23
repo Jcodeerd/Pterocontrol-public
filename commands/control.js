@@ -93,7 +93,7 @@ exports.run = (client, message, args) => {
         .setThumbnail(thumbnail)
         .setFooter(footer)
         .setDescription(
-          "Your panel has been successfully registered on our api. You can now access it via the panel menu\n\n[Join our support server (Click Me)](https://dsc.gg/u-hosting)"
+          "Your Panel has been successfully registered on our Database. You can now access it via the Panel Menu\n\n[Join our support server (Click Me)](https://dsc.gg/u-hosting)"
         );
 
       const reEmbed = new MessageEmbed()
@@ -107,7 +107,7 @@ exports.run = (client, message, args) => {
         .setFooter(footer)
         .setColor(color)
         .setDescription(
-          "Now enter a name that will be used for multi panels **(Any value)**"
+          "Now enter a Name that you wanna call your Panel. **(Any value)**"
         );
 
       const reUrl = new MessageEmbed()
@@ -121,7 +121,7 @@ exports.run = (client, message, args) => {
         .setFooter(footer)
         .setColor(color)
         .setDescription(
-          "Please send your client api key. Example: `h9eVJyejq3d97yQfuY55CxSWs73u9lC9gFfW0FutBR9hNfw`\n\nRemember to use `Client Api key` and not `Admin Api key`"
+          "Please send your client api key. Example: `h9eVJyejq3d97yQfuY55CxSWs73u9lC9gFfW0FutBR9hNfw`\n\nRemember to use the `Client Api key` and not the `Admin Api key`"
         );
 
       const reDm = new MessageEmbed()
@@ -130,7 +130,7 @@ exports.run = (client, message, args) => {
         .setThumbnail(thumbnail)
         .setFooter(footer)
         .setDescription(
-          "For privacy precautions, the requested action will take place in your DMS. Please ensure that you are allowed to received DMS from this server"
+          "For privacy precautions, the requested action will take place in your DM's. Please ensure that you are allowed to received DMS from this server"
         );
 
       if (panels.length < 1)
@@ -237,7 +237,7 @@ exports.run = (client, message, args) => {
       panels.forEach((data) => {
         let option = new MessageMenuOption()
           .setLabel(data.NAME)
-          .setDescription("Select this to manage this panel")
+          .setDescription("Select this to manage this Panel")
           .setValue(data.NAME);
 
         options.push(option);
@@ -251,7 +251,7 @@ exports.run = (client, message, args) => {
         .setFooter(footer)
         .setThumbnail(thumbnail)
         .setColor(color)
-        .setDescription("Please select a panel to manage\n" + panelist);
+        .setDescription("Please select a Panel to manage\n" + panelist);
 
       const panelMenu = new MessageMenu().addOptions(options).setID("pmenu");
 
@@ -354,7 +354,7 @@ exports.run = (client, message, args) => {
                     .setThumbnail(thumbnail)
                     .setColor(color)
                     .setDescription(
-                      "Hey, what do you want to do with this " + m.values[0]
+                      "Hey, what do you want to do with " + m.values[0]
                     );
 
                   const pManage = new MessageButton()
@@ -429,28 +429,28 @@ exports.run = (client, message, args) => {
                           .setFooter(footer)
                           .setColor(color)
                           .setDescription(
-                            "Please send your currect password on this panel"
+                            "Please send your currect password on this Panel"
                           );
 
                         const newEmail = new MessageEmbed()
                           .setFooter(footer)
                           .setColor(color)
                           .setDescription(
-                            "Please send your new password for this panel"
+                            "Please send your new password for this Panel"
                           );
 
                         const newPassword = new MessageEmbed()
                           .setFooter(footer)
                           .setColor(color)
                           .setDescription(
-                            "Please send your new password for this panel"
+                            "Please send your new password for this Panel"
                           );
 
                         const successAcc = new MessageEmbed()
                           .setFooter(footer)
                           .setColor(color)
                           .setDescription(
-                            "Sended request to panel, if you didn't logged out from panel, that means your currect password is wrong, for future update this will send a error embed if you put wrong currect password"
+                            "Sent request to Panel, if you did not logout from panel, your password is wrong!"
                           );
 
                         const accEmbed = new MessageEmbed()
@@ -600,7 +600,7 @@ exports.run = (client, message, args) => {
                               .setColor(color)
                               .setThumbnail(thumbnail)
                               .setDescription(
-                                "Your email from this pterodactyl panel is `" +
+                                "Your E-Mail from this Pterodactyl Panel is `" +
                                   acc.email +
                                   "`"
                               );
@@ -621,7 +621,7 @@ exports.run = (client, message, args) => {
                         .setColor(color)
                         .setThumbnail(thumbnail)
                         .setDescription(
-                          "Please select which one you want to edit"
+                          "Please select what you want to edit"
                         );
 
                       const updated = new MessageEmbed()
@@ -637,12 +637,12 @@ exports.run = (client, message, args) => {
                         .setID("ename");
 
                       const editUrl = new MessageButton()
-                        .setLabel("Url/Link")
+                        .setLabel("URL")
                         .setStyle("blurple")
                         .setID("eurl");
 
                       const editApi = new MessageButton()
-                        .setLabel("Apikey")
+                        .setLabel("API Key")
                         .setStyle("blurple")
                         .setID("ekey");
 
@@ -670,7 +670,7 @@ exports.run = (client, message, args) => {
                             .setColor(color)
                             .setThumbnail(thumbnail)
                             .setDescription(
-                              "Please send what the new name for this panel"
+                              "Please send the new Name of this Panel."
                             );
 
                           panelmsg.edit({ embed: editm, component: [] });
@@ -734,7 +734,7 @@ exports.run = (client, message, args) => {
                             .setColor(color)
                             .setThumbnail(thumbnail)
                             .setDescription(
-                              "Please send what the new url for this panel"
+                              "Please send your new URL of this Panel."
                             );
 
                           panelmsg.edit({ embed: editm, component: [] });
@@ -783,7 +783,7 @@ exports.run = (client, message, args) => {
                             .setColor(color)
                             .setThumbnail(thumbnail)
                             .setDescription(
-                              "Please send what the new api for this panel"
+                              "Please send the new API Key for this Panel."
                             );
 
                           panelmsg.edit({ embed: editm, component: [] });
@@ -833,7 +833,7 @@ exports.run = (client, message, args) => {
                         .setFooter(footer)
                         .setColor(color)
                         .setThumbnail(thumbnail)
-                        .setDescription("Your panel url is " + fpanel[0].URL);
+                        .setDescription("Your Panel URL is " + fpanel[0].URL);
 
                       panelmsg.delete();
                       pm.reply.send({ embed: embedUrl, ephemeral: true });
@@ -845,7 +845,7 @@ exports.run = (client, message, args) => {
                         .setThumbnail(thumbnail)
                         .setColor(color)
                         .setDescription(
-                          "Panel succesfully deleted from our databases"
+                          "Panel succesfully deleted from our Database."
                         );
 
                       panel
@@ -881,7 +881,7 @@ exports.run = (client, message, args) => {
 
                           if (response.length == 0) {
                             serverEmbed.setDescription(
-                              "No servers were found on this pterodactyl account"
+                              "No servers were found on this Pterodactyl Account"
                             );
                             return panelmsg.edit(serverEmbed);
                           } else {
@@ -894,7 +894,7 @@ exports.run = (client, message, args) => {
                               somemenu.setLabel(name);
                               somemenu.setValue(S.attributes.identifier);
                               somemenu.setDescription(
-                                "Select this menu to manage this server"
+                                "Select the Menu to Manage this Server."
                               );
                               anothertemp.push(somemenu);
 
@@ -1154,7 +1154,7 @@ exports.run = (client, message, args) => {
                                     .setColor(color)
                                     .setThumbnail(thumbnail)
                                     .setDescription(
-                                      "Server succesfully stopped"
+                                      "Server succesfully stopped."
                                     );
 
                                   const serverKilled = new MessageEmbed()
@@ -1163,7 +1163,7 @@ exports.run = (client, message, args) => {
                                     .setColor(color)
                                     .setThumbnail(thumbnail)
                                     .setDescription(
-                                      "Server succesfully killed"
+                                      "Server succesfully killed."
                                     );
 
                                   const serverStarted = new MessageEmbed()
@@ -1172,7 +1172,7 @@ exports.run = (client, message, args) => {
                                     .setColor(color)
                                     .setThumbnail(thumbnail)
                                     .setDescription(
-                                      "Server succesfully started"
+                                      "Server succesfully started."
                                     );
 
                                   const serverRestarted = new MessageEmbed()
@@ -1181,7 +1181,7 @@ exports.run = (client, message, args) => {
                                     .setColor(color)
                                     .setThumbnail(thumbnail)
                                     .setDescription(
-                                      "Server succesfully restarted"
+                                      "Server succesfully restarted."
                                     );
 
                                   const serverReinstalled = new MessageEmbed()
@@ -1190,7 +1190,7 @@ exports.run = (client, message, args) => {
                                     .setColor(color)
                                     .setThumbnail(thumbnail)
                                     .setDescription(
-                                      "Server succesfully reinstalled"
+                                      "Server succesfully reinstalled."
                                     );
 
                                   const serverSended = new MessageEmbed()
@@ -1199,7 +1199,7 @@ exports.run = (client, message, args) => {
                                     .setColor(color)
                                     .setThumbnail(thumbnail)
                                     .setDescription(
-                                      "Command succesfully sended"
+                                      "Command was sent successfully."
                                     );
 
                                   const userAdd = new MessageButton()
@@ -1306,7 +1306,7 @@ exports.run = (client, message, args) => {
                                             .setColor(color)
                                             .setThumbnail(thumbnail)
                                             .setDescription(
-                                              "Please send a message for the command to be sent to the server"
+                                              "Please send a Command that should be sent to the Server."
                                             );
 
                                           panelmsg.edit({
@@ -1368,7 +1368,7 @@ exports.run = (client, message, args) => {
 
                                               if (users.length === 0) {
                                                 usrEmbed.setDescription(
-                                                  "There is no subuser n this server"
+                                                  "There is no subuser in this server"
                                                 );
                                                 return panelmsg.edit({
                                                   embed: usrEmbed,
@@ -1433,7 +1433,7 @@ exports.run = (client, message, args) => {
                                                         .setFooter(footer)
                                                         .setThumbnail(thumbnail)
                                                         .setDescription(
-                                                          "Please send email of the user"
+                                                          "Please send the E-Mail of the User."
                                                         );
 
                                                     panelmsg.edit({
@@ -1447,7 +1447,7 @@ exports.run = (client, message, args) => {
                                                         .setFooter(footer)
                                                         .setThumbnail(thumbnail)
                                                         .setDescription(
-                                                          "User added!, for security reason user added by this bot will only has start, restart, and stop permission"
+                                                          "User added!, for security reasons the user that was added by this bot will only have start, restart, and stop permissions."
                                                         );
 
                                                     await message.channel
@@ -1525,7 +1525,7 @@ exports.run = (client, message, args) => {
 
                                             if (bkps.length === 0) {
                                               usrEmbed.setDescription(
-                                                "There is no backup on this server"
+                                                "There is no Backup on this server"
                                               );
                                               return panelmsg.edit({
                                                 embed: usrEmbed,
@@ -1601,7 +1601,7 @@ exports.run = (client, message, args) => {
                                                   )
                                                     .then((done) => {
                                                       sucBkp.setDescription(
-                                                        "Successfuly created backup for your server!"
+                                                        "Successfuly created Backup for your server!"
                                                       );
                                                       panelmsg.edit({
                                                         embed: sucBkp,
@@ -1631,7 +1631,7 @@ exports.run = (client, message, args) => {
                                             .setFooter(footer)
                                             .setThumbnail(thumbnail)
                                             .setDescription(
-                                              "Please send a new name for this server"
+                                              "Please send a new Name for this Server."
                                             );
 
                                           panelmsg.edit({
@@ -1644,7 +1644,7 @@ exports.run = (client, message, args) => {
                                             .setFooter(footer)
                                             .setThumbnail(thumbnail)
                                             .setDescription(
-                                              "Server new name has been seted"
+                                              "New server name has been set."
                                             );
 
                                           await message.channel
@@ -1829,7 +1829,7 @@ exports.run = (client, message, args) => {
 
                                               if (users.length === 0) {
                                                 usrEmbed.setDescription(
-                                                  "There is no subuser n this server"
+                                                  "There is no subuser in this server"
                                                 );
                                                 return panelmsg.edit({
                                                   embed: usrEmbed,
@@ -1894,7 +1894,7 @@ exports.run = (client, message, args) => {
                                                         .setFooter(footer)
                                                         .setThumbnail(thumbnail)
                                                         .setDescription(
-                                                          "Please send email of the user"
+                                                          "Please send the E-Mail of the User."
                                                         );
 
                                                     panelmsg.edit({
@@ -1908,7 +1908,7 @@ exports.run = (client, message, args) => {
                                                         .setFooter(footer)
                                                         .setThumbnail(thumbnail)
                                                         .setDescription(
-                                                          "User added!, for security reason user added by this bot will only has start, restart, and stop permission"
+                                                          "User added!, for security reasons the user added by this bot will only have start, restart, and stop permissions."
                                                         );
 
                                                     await message.channel
@@ -1986,7 +1986,7 @@ exports.run = (client, message, args) => {
 
                                             if (bkps.length === 0) {
                                               usrEmbed.setDescription(
-                                                "There is no backup on this server"
+                                                "There is no Backup on this server"
                                               );
                                               return panelmsg.edit({
                                                 embed: usrEmbed,
@@ -2062,7 +2062,7 @@ exports.run = (client, message, args) => {
                                                   )
                                                     .then((done) => {
                                                       sucBkp.setDescription(
-                                                        "Successfuly created backup for your server!"
+                                                        "Successfuly created Backup for your server!"
                                                       );
                                                       panelmsg.edit({
                                                         embed: sucBkp,
@@ -2072,7 +2072,7 @@ exports.run = (client, message, args) => {
                                                     .catch((error) => {
                                                       if (error === 924) {
                                                         sucBkp.setDescription(
-                                                          "You need to wait 10 minutes to create another backup"
+                                                          "You need to wait 10 minutes to create another Backup"
                                                         );
                                                         panelmsg.edit({
                                                           embed: sucBkp,
@@ -2092,7 +2092,7 @@ exports.run = (client, message, args) => {
                                             .setFooter(footer)
                                             .setThumbnail(thumbnail)
                                             .setDescription(
-                                              "Please send a new name for this server"
+                                              "Please provide a new Server Name."
                                             );
 
                                           panelmsg.edit({
@@ -2105,7 +2105,7 @@ exports.run = (client, message, args) => {
                                             .setFooter(footer)
                                             .setThumbnail(thumbnail)
                                             .setDescription(
-                                              "Server new name has been seted"
+                                              "New server name has been set."
                                             );
 
                                           await message.channel
@@ -2147,19 +2147,19 @@ exports.run = (client, message, args) => {
                                 } catch (e) {
                                   let ErrCon = new MessageEmbed()
                                     .setTitle(
-                                      "PteroControl ¦ Server Server Management"
+                                      "PteroControl ¦ Server Management"
                                     )
                                     .setThumbnail(client.user.avatarURL())
                                     .setColor(color)
                                     .setDescription(
-                                      "An error just occurred please report this to our support server!"
+                                      "An error occured, please get Support on our Discord Server."
                                     );
 
                                   let err305 = new MessageEmbed()
                                     .setTitle("PteroControl | Error 305")
                                     .setColor(color)
                                     .setDescription(
-                                      "An error occured while fetching your servers. This can occur if your host has cloudflare enabled on their panel which will prevent the bot from connecting to the endpoints"
+                                      "An error occured while fetching your servers. This can occur if your Host has Cloudflare enabled on their Panel which will prevent the bot from connecting to the endpoints."
                                     )
                                     .setImage("https://http.cat/305");
                                   if (e === 305)
@@ -2169,7 +2169,7 @@ exports.run = (client, message, args) => {
                                     .setTitle("PteroControl | Error 304")
                                     .setColor(color)
                                     .setDescription(
-                                      "An error occured while fetching your servers. This can occur if you put wrong apikeys, make sure the apikeys are client not admin"
+                                      "An error occured while fetching your servers. This can occur if you put wrong API Keys, make sure the API Keys are Client Keys, not Admin!"
                                     )
                                     .setImage("https://http.cat/304");
                                   if (e === 304)
@@ -2179,7 +2179,7 @@ exports.run = (client, message, args) => {
                                     .setTitle("PteroControl | Error 344")
                                     .setColor(color)
                                     .setDescription(
-                                      "An error occured while fetching your servers. This can occur if the panel is down"
+                                      "An error occured while fetching your servers. This can occur if the Panel is Down"
                                     )
                                     .setImage("https://http.cat/344");
                                   if (e === 344)
@@ -2192,7 +2192,7 @@ exports.run = (client, message, args) => {
                                     )
                                     .setColor(color)
                                     .setDescription(
-                                      "An error occured while fetching your servers. This can occur if your put invalid website link"
+                                      "An error occured while fetching your servers. This can occur if you put an invalid Website Link."
                                     );
                                   if (e === 8)
                                     return message.channel.send(err8);
@@ -2204,7 +2204,7 @@ exports.run = (client, message, args) => {
                                     )
                                     .setColor(color)
                                     .setDescription(
-                                      "An error occured while fetching your servers. This can occur if you put website link that doesn't have pterodactyl panel"
+                                      "An error occured while fetching your servers. This can occur if you put a Website Link which is not a Pterodactyl Panel."
                                     );
                                   if (`${e}` === "NaN")
                                     return message.channel.send(errNaN);
@@ -2233,14 +2233,14 @@ exports.run = (client, message, args) => {
                             .setThumbnail(client.user.avatarURL())
                             .setColor(color)
                             .setDescription(
-                              "An error just occurred please report this to our support server!"
+                              "An error just occurred please report this to our Support Server!"
                             );
 
                           let err305 = new MessageEmbed()
                             .setTitle("PteroControl | Error 305")
                             .setColor(color)
                             .setDescription(
-                              "An error occured while fetching your servers. This can occur if your host has cloudflare enabled on their panel which will prevent the bot from connecting to the endpoints"
+                              "An error occured while fetching your servers. This can occur if your host has Cloudflare enabled on their panel which will prevent the bot from connecting to the endpoints"
                             )
                             .setImage("https://http.cat/305");
                           if (e === 305) return message.channel.send(err305);
@@ -2249,7 +2249,7 @@ exports.run = (client, message, args) => {
                             .setTitle("PteroControl | Error 304")
                             .setColor(color)
                             .setDescription(
-                              "An error occured while fetching your servers. This can occur if you put wrong apikeys, make sure the apikeys are client not admin"
+                              "An error occured while fetching your servers. This can occur if you put wrong API Keys, make sure the API Keys are Client, not Admin!"
                             )
                             .setImage("https://http.cat/304");
                           if (e === 304) return message.channel.send(err304);
@@ -2258,7 +2258,7 @@ exports.run = (client, message, args) => {
                             .setTitle("PteroControl | Error 344")
                             .setColor(color)
                             .setDescription(
-                              "An error occured while fetching your servers. This can occur if the panel is down"
+                              "An error occured while fetching your servers. This can occur if the Panel is Down"
                             )
                             .setImage("https://http.cat/344");
                           if (e === 344) return message.channel.send(err344);
@@ -2270,7 +2270,7 @@ exports.run = (client, message, args) => {
                             )
                             .setColor(color)
                             .setDescription(
-                              "An error occured while fetching your servers. This can occur if your put invalid website link"
+                              "An error occured while fetching your servers. This can occur if you put an invalid Website Link."
                             );
                           if (e === 8) return message.channel.send(err8);
 
@@ -2281,7 +2281,7 @@ exports.run = (client, message, args) => {
                             )
                             .setColor(color)
                             .setDescription(
-                              "An error occured while fetching your servers. This can occur if you put website link that doesn't have pterodactyl panel"
+                              "An error occured while fetching your servers. This can occur if the Website Link you provided is not a Pterodactyl Panel."
                             );
                           if (`${e}` === "NaN")
                             return message.channel.send(errNaN);
