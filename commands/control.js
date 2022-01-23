@@ -93,7 +93,7 @@ exports.run = (client, message, args) => {
         .setThumbnail(thumbnail)
         .setFooter(footer)
         .setDescription(
-          "Your Panel has been successfully registered on our Database. You can now access it via the Panel Menu\n\n[Join our support server (Click Me)](https://dsc.gg/u-hosting)"
+          "Your Panel has been successfully registered on our Database. You can now access it via the panel menu.\n\n[Join our support server (Click Me)](discord.gg/example)"
         );
 
       const reEmbed = new MessageEmbed()
@@ -107,7 +107,7 @@ exports.run = (client, message, args) => {
         .setFooter(footer)
         .setColor(color)
         .setDescription(
-          "Now enter a Name that you wanna call your Panel. **(Any value)**"
+          "Enter a name that you want to call your panel.  **(Any value)**"
         );
 
       const reUrl = new MessageEmbed()
@@ -130,7 +130,7 @@ exports.run = (client, message, args) => {
         .setThumbnail(thumbnail)
         .setFooter(footer)
         .setDescription(
-          "For privacy precautions, the requested action will take place in your DM's. Please ensure that you are allowed to received DMS from this server"
+          "For privacy precautions, the requested action will take place in your DM's. Please ensure that you are allowed to receive DM's from this server."
         );
 
       if (panels.length < 1)
@@ -237,7 +237,7 @@ exports.run = (client, message, args) => {
       panels.forEach((data) => {
         let option = new MessageMenuOption()
           .setLabel(data.NAME)
-          .setDescription("Select this to manage this Panel")
+          .setDescription("Select this to manage this panel")
           .setValue(data.NAME);
 
         options.push(option);
@@ -251,7 +251,7 @@ exports.run = (client, message, args) => {
         .setFooter(footer)
         .setThumbnail(thumbnail)
         .setColor(color)
-        .setDescription("Please select a Panel to manage\n" + panelist);
+        .setDescription("Please select a panel to manage\n" + panelist);
 
       const panelMenu = new MessageMenu().addOptions(options).setID("pmenu");
 
@@ -429,28 +429,28 @@ exports.run = (client, message, args) => {
                           .setFooter(footer)
                           .setColor(color)
                           .setDescription(
-                            "Please send your currect password on this Panel"
+                            "Please send your currect password on this panel"
                           );
 
                         const newEmail = new MessageEmbed()
                           .setFooter(footer)
                           .setColor(color)
                           .setDescription(
-                            "Please send your new password for this Panel"
+                            "Please send your new password for this panel"
                           );
 
                         const newPassword = new MessageEmbed()
                           .setFooter(footer)
                           .setColor(color)
                           .setDescription(
-                            "Please send your new password for this Panel"
+                            "Please send your new password for this panel"
                           );
 
                         const successAcc = new MessageEmbed()
                           .setFooter(footer)
                           .setColor(color)
                           .setDescription(
-                            "Sent request to Panel, if you did not logout from panel, your password is wrong!"
+                            "Sent request to panel, if you did not logout from panel, your password is wrong!"
                           );
 
                         const accEmbed = new MessageEmbed()
@@ -600,7 +600,7 @@ exports.run = (client, message, args) => {
                               .setColor(color)
                               .setThumbnail(thumbnail)
                               .setDescription(
-                                "Your E-Mail from this Pterodactyl Panel is `" +
+                                "Your E-Mail from this Pterodactyl panel is `" +
                                   acc.email +
                                   "`"
                               );
@@ -670,7 +670,7 @@ exports.run = (client, message, args) => {
                             .setColor(color)
                             .setThumbnail(thumbnail)
                             .setDescription(
-                              "Please send the new Name of this Panel."
+                              "Please send the new name of this panel."
                             );
 
                           panelmsg.edit({ embed: editm, component: [] });
@@ -734,7 +734,7 @@ exports.run = (client, message, args) => {
                             .setColor(color)
                             .setThumbnail(thumbnail)
                             .setDescription(
-                              "Please send your new URL of this Panel."
+                              "Please send your new URL of this panel."
                             );
 
                           panelmsg.edit({ embed: editm, component: [] });
@@ -833,7 +833,7 @@ exports.run = (client, message, args) => {
                         .setFooter(footer)
                         .setColor(color)
                         .setThumbnail(thumbnail)
-                        .setDescription("Your Panel URL is " + fpanel[0].URL);
+                        .setDescription("Your panel URL is " + fpanel[0].URL);
 
                       panelmsg.delete();
                       pm.reply.send({ embed: embedUrl, ephemeral: true });
@@ -894,7 +894,7 @@ exports.run = (client, message, args) => {
                               somemenu.setLabel(name);
                               somemenu.setValue(S.attributes.identifier);
                               somemenu.setDescription(
-                                "Select the Menu to Manage this Server."
+                                "Select the menu to manage this server."
                               );
                               anothertemp.push(somemenu);
 
@@ -1306,7 +1306,7 @@ exports.run = (client, message, args) => {
                                             .setColor(color)
                                             .setThumbnail(thumbnail)
                                             .setDescription(
-                                              "Please send a Command that should be sent to the Server."
+                                              "Please send a Command that should be sent to the server."
                                             );
 
                                           panelmsg.edit({
@@ -1433,7 +1433,7 @@ exports.run = (client, message, args) => {
                                                         .setFooter(footer)
                                                         .setThumbnail(thumbnail)
                                                         .setDescription(
-                                                          "Please send the E-Mail of the User."
+                                                          "Please send the E-Mail of the user."
                                                         );
 
                                                     panelmsg.edit({
@@ -1525,7 +1525,7 @@ exports.run = (client, message, args) => {
 
                                             if (bkps.length === 0) {
                                               usrEmbed.setDescription(
-                                                "There is no Backup on this server"
+                                                "There is no backup on this server"
                                               );
                                               return panelmsg.edit({
                                                 embed: usrEmbed,
@@ -1601,7 +1601,7 @@ exports.run = (client, message, args) => {
                                                   )
                                                     .then((done) => {
                                                       sucBkp.setDescription(
-                                                        "Successfuly created Backup for your server!"
+                                                        "Successfuly created backup for your server!"
                                                       );
                                                       panelmsg.edit({
                                                         embed: sucBkp,
@@ -1631,7 +1631,7 @@ exports.run = (client, message, args) => {
                                             .setFooter(footer)
                                             .setThumbnail(thumbnail)
                                             .setDescription(
-                                              "Please send a new Name for this Server."
+                                              "Please send a new name for this server."
                                             );
 
                                           panelmsg.edit({
@@ -1894,7 +1894,7 @@ exports.run = (client, message, args) => {
                                                         .setFooter(footer)
                                                         .setThumbnail(thumbnail)
                                                         .setDescription(
-                                                          "Please send the E-Mail of the User."
+                                                          "Please send the E-Mail of the user."
                                                         );
 
                                                     panelmsg.edit({
@@ -1986,7 +1986,7 @@ exports.run = (client, message, args) => {
 
                                             if (bkps.length === 0) {
                                               usrEmbed.setDescription(
-                                                "There is no Backup on this server"
+                                                "There is no backup on this server"
                                               );
                                               return panelmsg.edit({
                                                 embed: usrEmbed,
@@ -2062,7 +2062,7 @@ exports.run = (client, message, args) => {
                                                   )
                                                     .then((done) => {
                                                       sucBkp.setDescription(
-                                                        "Successfuly created Backup for your server!"
+                                                        "Successfuly created backup for your server!"
                                                       );
                                                       panelmsg.edit({
                                                         embed: sucBkp,
@@ -2072,7 +2072,7 @@ exports.run = (client, message, args) => {
                                                     .catch((error) => {
                                                       if (error === 924) {
                                                         sucBkp.setDescription(
-                                                          "You need to wait 10 minutes to create another Backup"
+                                                          "You need to wait 10 minutes to create another backup"
                                                         );
                                                         panelmsg.edit({
                                                           embed: sucBkp,
@@ -2092,7 +2092,7 @@ exports.run = (client, message, args) => {
                                             .setFooter(footer)
                                             .setThumbnail(thumbnail)
                                             .setDescription(
-                                              "Please provide a new Server Name."
+                                              "Please provide a new server name."
                                             );
 
                                           panelmsg.edit({
@@ -2159,7 +2159,7 @@ exports.run = (client, message, args) => {
                                     .setTitle("PteroControl | Error 305")
                                     .setColor(color)
                                     .setDescription(
-                                      "An error occured while fetching your servers. This can occur if your Host has Cloudflare enabled on their Panel which will prevent the bot from connecting to the endpoints."
+                                      "An error occured while fetching your servers. This can occur if your host has Cloudflare enabled on their panel which will prevent the bot from connecting to the endpoints."
                                     )
                                     .setImage("https://http.cat/305");
                                   if (e === 305)
@@ -2179,7 +2179,7 @@ exports.run = (client, message, args) => {
                                     .setTitle("PteroControl | Error 344")
                                     .setColor(color)
                                     .setDescription(
-                                      "An error occured while fetching your servers. This can occur if the Panel is Down"
+                                      "An error occured while fetching your servers. This can occur if the panel is down"
                                     )
                                     .setImage("https://http.cat/344");
                                   if (e === 344)
@@ -2258,7 +2258,7 @@ exports.run = (client, message, args) => {
                             .setTitle("PteroControl | Error 344")
                             .setColor(color)
                             .setDescription(
-                              "An error occured while fetching your servers. This can occur if the Panel is Down"
+                              "An error occured while fetching your servers. This can occur if the panel is down"
                             )
                             .setImage("https://http.cat/344");
                           if (e === 344) return message.channel.send(err344);
